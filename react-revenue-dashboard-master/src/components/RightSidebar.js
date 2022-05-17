@@ -12,6 +12,7 @@ import Evicted from './Evicited'
 function RightSidebar() {
 	return (
 		<Container>
+			<Title>Sentiments Summary</Title>
 			<Senitments />
 			<Title>Other HouseMates</Title>
 			<Evicted />
@@ -29,7 +30,7 @@ const Container = styled.div`
 	margin:1rem;
 	flex-direction: column;
 	align-items: center;
-	gap: 2rem;
+	gap: 1rem;
 	@media screen and (min-width: 320px) and (max-width: 1080px) {
 		width: 100%;
 		height: max-content !important;

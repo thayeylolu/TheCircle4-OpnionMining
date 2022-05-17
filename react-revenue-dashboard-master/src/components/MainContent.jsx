@@ -2,11 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import Navbar from "./Navbar";
 import Profile from "./Profile";
+import IntroSection from "./IntroSection";
 
 function MainContent() {
   return (
     <Container>
       <Navbar />
+      <IntroSection/>
       <SubContainer>
         <SectionOne>
             <Profile/>
@@ -27,8 +29,7 @@ function MainContent() {
 const Container = styled.div`
   width: 90%;
   background: linear-gradient(to bottom right, #e6e4ff 0%, thistle 70%);
-
-  margin: 1rem 2rem 1rem 2rem;
+  margin: 1rem 1rem 1rem 1rem;
   @media screen and (min-width: 320px) and (max-width: 1080px) {
     display: flex;
     flex-direction: column;
@@ -39,8 +40,11 @@ const Container = styled.div`
 `;
 
 const SubContainer = styled.div`
-  margin: 0.5rem 0.5rem 0.5rem 0.5rem;
-  padding: 1rem 1rem 1rem 1rem;
+  //margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+  margin-top:-3rem;
+  margin-left:-1rem;
+  marign-right:1rem;
+  //padding: 1rem 1rem 1rem 1rem;
   height: 60%;
   width: 100%;
   display: flex;
@@ -54,8 +58,9 @@ const SectionOne = styled.div`
   display: flex;
   //justify-content: space-between; 
   height: 40%;
-  gap: 1rem;
-  margin: 3rem 2rem 3rem 1rem;
+  gap: 2rem;
+  padding-top: 0rem;
+  margin: 2.5rem 3rem 3rem 3rem;
   width: 100%;
   @media screen and (min-width: 320px) and (max-width: 1080px) {
     flex-direction: column;
@@ -86,40 +91,4 @@ const ColumnTwo1 = styled.div`
     align-items: center;
   }
 `;
-
-const TitleText1 = styled.p`
-  span {
-    font-weight: 500;
-    color: #484258;
-  }
-  @media screen and (min-width: 320px) and (max-width: 1080px) {
-    margin-top: 1rem;
-  }
-`;
-
-const TitleText = styled.h3`
-  height: 20%;
-  /* padding-top */
-`;
-
-const SectionTwo = styled.div`
-  display: flex;
-  gap: 2rem;
-  height: 26vh;
-  @media screen and (min-width: 320px) and (max-width: 1080px) {
-    flex-direction: column;
-    height: max-content;
-    width: 50%;
-  }
-`;
-const ColumnOne2 = styled.div`
-  @media screen and (min-width: 320px) and (max-width: 1080px) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-  }
-`;
-
 export default MainContent;

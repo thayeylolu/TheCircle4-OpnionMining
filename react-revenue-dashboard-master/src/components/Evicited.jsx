@@ -61,7 +61,7 @@ function Evicted() {
 }
 
 const YourProjects = styled.div`
-  height: 25%;
+  height: 26%;
   width: 85%;
   background-color: white;
   margin: 0rem 0rem 5rem 0rem;
@@ -115,6 +115,8 @@ const Row = styled.div`
   display: flex;
   align-items: center;
   margin-bottom: 0.4rem;
+  padding-left: 1.5rem;
+  padding-bottom: 0.5rem;
   ${({ justify }) =>
     justify &&
     `

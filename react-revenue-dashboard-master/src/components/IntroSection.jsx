@@ -1,13 +1,16 @@
 import React from "react";
 import styled from "styled-components";
 import { FiSearch } from "react-icons/fi";
-function Navbar() {
+
+function IntroSection() {
   return (
     <NavbarContainer>
-      <Text>
-        Hello,
-        <span> Circle Fam</span>
-      </Text>
+      
+      <TextIntro>
+      <SubTitle>About The Circle</SubTitle>
+        <span>  The Circle is a funny popularity competition series. Contestant must strategically choose whether to play as themselves or other people. The player voted most popular wins the cash prize</span>
+      </TextIntro>
+
     </NavbarContainer>
   );
 }
@@ -75,4 +78,8 @@ const Input = styled.input`
   }
 `;
 
-export default Navbar;
+const SubTitle = styled.h4`
+	color: black;
+`
+
+export default IntroSection;
