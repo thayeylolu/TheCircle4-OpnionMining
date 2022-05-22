@@ -11,7 +11,7 @@ function Sentiments() {
           <Row>
             <Digit>40%</Digit>
             <InfoContainer>
-              <Title>Negative</Title>
+              <Title>Positive</Title>
               <SubTitle>In top 20%</SubTitle>
             </InfoContainer>
           </Row>
@@ -61,8 +61,8 @@ function Sentiments() {
 }
 
 const InfoCard = styled.div`
-  height: 43%;
-  width: 16rem;
+
+  width: 80%;
   background-color: white;
   border-radius: 1rem;
   padding: 2rem;
@@ -74,8 +74,9 @@ const InfoCard = styled.div`
   &:hover {
     box-shadow: ${hoverEffect};
   }
-  @media screen and (min-width: 320px) and (max-width: 1080px) {
-    width: 80%;
+  @media screen and (min-width: 320px) and (max-width: 560px) {
+    width: 70%;
+    
   }
 `;
 
@@ -107,7 +108,7 @@ const Digit = styled.div`
   border-radius: 1rem;
 `;
 const InfoContainer = styled.div`
-  margin-left: 0.6rem;
+  //margin-left: 0.6rem;
 `;
 const Title = styled.h3`
   color: black;
