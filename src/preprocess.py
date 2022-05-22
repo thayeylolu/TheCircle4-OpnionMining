@@ -126,7 +126,7 @@ def main():
     clean_tweet = clean_tweet.apply(lambda x: clean_text(x))
 
     clean_tweet = clean_tweet.apply(lambda x: " ".join(x))
-    tweets_data["text_emoji"] = +clean_tweet + tweets_data["emojis"]
+    tweets_data["text_emoji"] = clean_tweet + tweets_data["emojis"]
     tweets_data["text_break"] = clean_tweet.str.split()
     tweets_data["text_break_emoji"] = tweets_data["text_emoji"].str.split()
     tweets_data["player"] = list(
