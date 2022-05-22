@@ -1,35 +1,81 @@
 import React from "react";
 import styled from "styled-components";
-import { RiHomeLine, RiFileCopyLine } from "react-icons/ri";
-import { FaWallet } from "react-icons/fa";
-import { AiOutlinePieChart } from "react-icons/ai";
+import Popups from "./Popups";
 import AvatarImage from "../assets/michelle.jpeg";
-import { darkThemeColor ,ContainerThemeColor , hoverEffect, themeColor} from "../utils";
+import { themeColor} from "../utils";
+import userData from "../users_data.json"
+//import userData from "../userData"
+import {useState} from 'react';
 
 
-function Profile() {
-  return (
-    <Container>
-      <ProfileContainer> 
+
+/* 
+<Container>
+        <ProfileContainer> 
         <Avatar src={AvatarImage} />
-        <ButtonName>Michelle Buteau</ButtonName>
+    
+        <ButtonName>{data.Name}</ButtonName>
+
+        <Emoji>
+          <span>🙂&emsp;&emsp;</span>
+          <span>😐&emsp;&emsp;</span>
+          <span>😒&emsp;&emsp;</span>
+        </Emoji>
+      
+          {
+            data.sent.map(()=>{
+                  return (
+                    <SubTitle>
+                      <Digit>5%&emsp;</Digit>
+                      <Digit>&emsp;20%&emsp;</Digit>
+                      <Digit>&emsp;15%&emsp;</Digit>
+                    </SubTitle>
+                  )
+            })
+          }
+      
+      </ProfileContainer>
+      </Container>
+
+*/
+
+function Profile() {    
+  return (
+    <>
+    {
+    userData.map((data)=>{
+        return (
+          <Container>
+        <ProfileContainer> 
+        <Avatar src={AvatarImage} />
+    
+        <ButtonName>{data.Name}</ButtonName>
+
         <Emoji>
           <span>🙂&emsp;&emsp;</span>
           <span>😐&emsp;&emsp;</span>
           <span>😒&emsp;&emsp;</span>
         </Emoji>
         <SubTitle>
-          <span>5%&emsp;</span>
-          <span>&emsp;20%&emsp;</span>
-          <span>&emsp;15%&emsp;</span>
+            {
+            data.sent.map((likeData)=>{
+                  return (
+                    <>
+                      <Digit>{likeData}%</Digit>
+                    </>
+                  )
+            })
+          }
         </SubTitle>
-
-        
-        
       </ProfileContainer>
       </Container>
-  );
+        )
+    })
+  }
+    </>
+  )
 }
+
 
 
 
@@ -38,6 +84,7 @@ const ProfileContainer = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+   align-items: center;
 `;
 
 
@@ -54,17 +101,12 @@ const Name = styled.h1`
 	margin: 0.8rem 0 0.5rem 0;
 `
 const Container = styled.div`
-  width: 25%;
-  height: 150%;
-
   background: #e6e4ff;
+  padding-bottom: 2rem;
   border-radius:1rem;
-  margin: 1rem 1rem 1rem 1rem;
   @media screen and (min-width: 320px) and (max-width: 1080px) {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    margin: 1rem 1rem 1rem 1rem;
   }
 `;
 
@@ -86,6 +128,8 @@ const PopCardContainer = styled.div`
 
 const Emoji = styled.h3`
     padding: 1rem  1rem 0rem 2.5rem;
+    display: flex;
+    flex-direction: row;
 
   span {
     font-weight: 200;
@@ -119,9 +163,14 @@ const ButtonName = styled.button`
   border-radius: 0.5rem;
   font-size: 0.8rem;
   font-weight: normal;
-  cursor: pointer;
-  
 
+`;
+
+const Digit = styled.span`
+  background-color: ${themeColor};
+  padding: 0.2rem 0.7rem;
+  font-size: 1rem;
+  // border-radius: 1rem;
 `;
 
 export default Profile;
