@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 
-# Adapted from AI Spectrum
 # Author: Taiwo Owoseni
 # date: 2022-05-14
 
