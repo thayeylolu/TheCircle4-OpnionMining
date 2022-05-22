@@ -6,7 +6,6 @@ import MainContent from './components/MainContent'
 function App() {
 	return (
 		<Container>
-			
 			<MainContent />
 			<RightSidebar />
 		</Container>
@@ -15,9 +14,10 @@ function App() {
 
 const Container = styled.div`
 	display: flex;
-	height: 97vh;
+	width: 100%;
 	background: linear-gradient(to bottom right, white 0%, #e6e4ff 70%);
 	border-radius: 2rem;
+	box-sizing: border-box;
 	@media screen and (min-width: 320px) and (max-width: 1080px) {
 		flex-direction: column;
 	}
