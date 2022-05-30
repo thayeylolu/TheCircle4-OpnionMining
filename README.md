@@ -12,4 +12,4 @@ As a die-hard fan of the Circle ( and highly emotional viewer when one of my fav
 
 ## DashBoard
 
-![Dashboard](./dashboardmock.jpg)
+![Dashboard](./docs/images/dashboardmock.jpeg)
