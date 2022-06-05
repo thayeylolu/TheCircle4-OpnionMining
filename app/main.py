@@ -29,18 +29,15 @@ app.layout = html.Div(
                         ColumnSections(
                             Rows(
                                 children=[
-                                    html.P("Left Container"),
+                                    SectionOneHTML(),
                                     Rows(
-                                        children=[
-                                            ColsOne(lg=2),
-                                            ColsOne(lg=2),
-                                            ColsOne(lg=2),
-                                            ColsOne(lg=6),
-                                        ],
-                                        justify="evenly",
-                                        style=SectionOneParent(),
+                                        children=[SectionThreeHTML(), SectionFourHTML()]
                                     ),
-                                ],
+                                    Rows(
+                                        children=[SectionSixHTML(), SectionSevenHTML()]
+                                    ),
+                                    SectionEightHTML(),
+                                ]
                             )
                         ),
                         # rights
@@ -49,34 +46,11 @@ app.layout = html.Div(
                                 children=[
                                     html.P("Righ Container"),
                                     # section 2
-                                    Rows(
-                                        children=[
-                                            ColsTwo(),
-                                        ],
-                                    ),
+                                    SectionTwoHTML(),
                                     # section 5
-                                    Rows(
-                                        children=[
-                                            # Section 5a
-                                            Rows(
-                                                children=[
-                                                    ColsTwoInner(),
-                                                ],
-                                                style = SectionFiveA()
-                                            ),
-                                             # Section 5b
-                                            Rows(
-                                                children=[
-                                                    ColsTwoInner(),
-                                                    
-                                                ],
-                                                style = SectionFiveB()
-                                            ),
-                                        ],
-                                        style=SectionFive()
-                                    ),
+                                    SectionFiveHTML(),
                                 ],
-                                style=Hold2N5()
+                                style=Hold2N5(),
                             )
                         ),
                     ],
